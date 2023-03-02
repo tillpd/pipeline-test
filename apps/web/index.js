@@ -8,6 +8,8 @@ const dbTest = async() => {
   console.log(results)
 }
 
+console.log(process.env.HEROKU_POSTGRESQL_MAROON_URL);
+
 (async () => {
 try {
   dbTest()

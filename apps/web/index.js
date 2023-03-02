@@ -1,7 +1,20 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-const db = require('./db')
+const sql = require('./db')
+
+const dbTest = async() => {
+  const results = await sql`SELECT 1;`
+  console.log(results)
+}
+
+(async () => {
+try {
+  dbTest()
+} catch (e) {
+  console.log(e)
+}
+})()
 
 express()
   .use(express.static(path.join(__dirname, 'public')))

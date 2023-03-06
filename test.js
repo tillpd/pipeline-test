@@ -3,6 +3,7 @@ const got = require('got');
 const test = require('tape');
 
 // Start the app
+// test 1
 const env = Object.assign({}, process.env, {PORT: 5000});
 const child = spawn('node', ['index.js'], {env});
 

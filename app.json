@@ -10,5 +10,10 @@
     "review": {
       "addons": ["heroku-postgresql:mini"]
     }
-  }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/pfotendoctor/heroku-buildpack-nodejs.git"
+    }
+  ]
 }
